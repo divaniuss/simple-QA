@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
+from secrets import uri
 
-uri = "mongodb+srv://admin:321@bd1.vay3lbr.mongodb.net/?appName=bd1"
 client = MongoClient(uri, server_api=ServerApi('1'))
 try:
     client.admin.command('ping')
